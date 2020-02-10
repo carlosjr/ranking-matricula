@@ -12,6 +12,9 @@ const app = express();
 app.config = config;
 app.datasource = datasource(app);
 
+app.use(express.static(__dirname + '/dist'));
+
+
 // Resolvendo CORS
 // const allowCrossDomain = (req, res, next) => {
 //     res.header('Access-Control-Allow-Origin', '*');
